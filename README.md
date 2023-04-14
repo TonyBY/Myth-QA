@@ -3,7 +3,7 @@
 Yang Bai, Anthony Colas, Daisy Wang<br>
 University of Florida <br>
 
-## Getting Started
+## 0. Getting Started
 We describe here how to run the pipeline end-to-en and how to evaluate each module seperatly. 
 Before started, make sure you get your environment ready.<br>
 - Python >= 3.8<br>
@@ -16,7 +16,7 @@ pip install -r requirements.txt
 export PYTHONPATH=$<MythQA project dir>
 ```
 
-## Data Preparing
+## 1. Data Preparing
 - Annotated dataset is saved at 'data/annotations/' directory.<br>
   - An Example of Data
 ```jsonl
@@ -123,20 +123,20 @@ python index_corpus.py
 - Sparse index will be saved at data/index/sparse_term_frequency_embedding directory.<br>
 - This step is necessary for downstream operations
 
-## End-to-end demo
+## 2. End-to-end demo
 - At the root directory.
 ```bash
 python main.py --demo 'What is origin of COVID-19?' --cache-results --use-cache
 ```
 - Result will be saved at 'data/resutls/end2end/demos/' directory.
 
-## Evaluate Tweet Retrieval
+## 3. Evaluate Tweet Retrieval
 - cd into the 'Evaluator/' directory.
 ```bash
 python retriever_evaluator.py
 ```
 
-## Evaluate Multiple Answer Prediction for Entity Questions.
+## 4. Evaluate Multiple Answer Prediction for Entity Questions.
 ### Intrinsic Evaluation
 - cd into the 'Evaluator/' directory.
 ```bash
@@ -149,13 +149,13 @@ python reader_evaluator.py --intrinsic
 python reader_evaluator.py
 ```
 
-## Evaluate Stance Detection.
+## 5. Evaluate Stance Detection.
 - cd into the 'Evaluator/' directory.
 ```bash
 python stance_detector_evaluator.py
 ```
 
-## Evaluate Controversail Stance Mining.
+## 6. Evaluate Controversail Stance Mining.
 ### Intrinsic Evaluation
 - cd into the 'Evaluator/' directory.
 ```bash
@@ -170,10 +170,10 @@ python stance_miner_evaluator.py
 
 - All outputs can be found in the './data/results/' directory.
 
-## Metrics
+## 7. Metrics
 - New metrics are proposed for evaluation: MHit@k for multi-answer IR; F1_ans, F1_CONTRO@e for end-to-end MythQA evaluation. Please refer to our paper for more details.
 
-## Citation
+## Cite
 If you use MythQA, please cite the following paper: 
 
 ```
