@@ -30,7 +30,7 @@ python TwitterAPIQuerier.py
 ```
 - Returned raw tweets will be saved at 'data/raw/' directory.
 - Note: Twitter API access is required to get tweet content with tweet ids.
-- By the [Twitter's policy](https://developer.twitter.com/en/developer-terms/agreement-and-policy#id34:~:text=If%20you%20provide,commercial%20research%20purposes.), we are not allowed to share tweet content but tweet IDs.
+- By the [Twitter's policy](https://developer.twitter.com/en/developer-terms/agreement-and-policy#id34:~:text=The%20best%20place,commercial%20research%20purposes.), we are not allowed to share tweet content but tweet IDs.
 
 ### Getting precessed tweets from raw
 - cd into the 'DataProcess/' directory.
